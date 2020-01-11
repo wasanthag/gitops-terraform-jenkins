@@ -4,7 +4,7 @@
 
 This repository will demonstrate an example GitOps workflow with Terraform and Jenkins.
 
-The configuration in this repository was run using `Terraform v0.11.13`.
+The configuration in this repository was updated and now supports `Terraform v0.12.19`.
 
 Video can be found here:
 
@@ -31,6 +31,8 @@ terraform {
   }
 }
 ```
+
+You can also update the key name to whatever you want your state file to be named.
 
 ## Plugins Required
 
