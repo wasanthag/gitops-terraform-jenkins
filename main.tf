@@ -1,9 +1,11 @@
 # Terraform state will be stored in S3
 terraform {
-  backend "s3" {
-    bucket = "gamagew-s3"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization    = "wwtmulticloud"
+    workspaces = {
+      name  = "jenkins-dev"
+      }
   }
 }
 
