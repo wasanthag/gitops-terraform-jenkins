@@ -6,8 +6,13 @@ def tfCodeFilePath = "${repoName}/${tfCodeId}.tf"   //Path and filename of the n
 def gitCredentials = 'github-ssh'                   //Credential ID in Jenkins of your GitHub SSH Credentials
 def tfeCredentials = 'tfc-token'                         //Credential ID in Jenkins of your Terraform Enterprise Credentials
 
-  pipeline {
-    agent any
+
+ pipeline {
+   agent any
+   
+   triggers {
+    githubPush()
+  }
       
   stages {
       
