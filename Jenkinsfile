@@ -23,7 +23,7 @@ def tfeCredentials = 'tfc-token'                         //Credential ID in Jenk
                  branches: [[name: 'master']],
                  userRemoteConfigs: [[
                     url: 'git@github.com:wasanthag/gitops-terraform-jenkins',
-                    credentialsId: '',
+                    credentialsId: 'github-ssh',
                  ]]
                 ])
            }
