@@ -1,7 +1,7 @@
 # Terraform state will be stored in S3
 terraform {
   backend "s3" {
-    bucket = "terraform-bucket-alex"
+    bucket = "gamagew-s3"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
@@ -22,7 +22,7 @@ resource "aws_instance" "default" {
   instance_type          = var.instance_type
 
   tags = {
-    Name = "terraform-default"
+    Name = "gitops-jenkins-tfc"
   }
 }
 
