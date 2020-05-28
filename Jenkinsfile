@@ -41,13 +41,11 @@ def tfeCredentials = 'tfc-token'                         //Credential ID in Jenk
 
     stage('4. Cleanup (destroy) the test machines'){
       steps {
-        sshagent (credentials: [gitCredentials]) {
-          sh """
-              terraform init -backend-config="token=$TOKEN" 
-              terraform destroy
+        sh """
+           terraform init -backend-config="token=$TOKEN" 
+           terraform destroy
           """
         }
-      }
     }
 
   } //stages
