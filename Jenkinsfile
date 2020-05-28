@@ -43,8 +43,8 @@ def tfeCredentials = 'tfc-token'                         //Credential ID in Jenk
       steps {
         sshagent (credentials: [gitCredentials]) {
           sh """
-              cd ${repoName}
-              terraform apply
+              terraform init -backend-config="token=$TOKEN" 
+              terraform destroy
           """
         }
       }
