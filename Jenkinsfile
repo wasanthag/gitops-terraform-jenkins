@@ -36,6 +36,7 @@ def tfeCredentials = 'tfc-token'                         //Credential ID in Jenk
     stage('3. Do integration or deployment testing'){
       steps {
         echo "Do whatever integration or deployment testing you need to do..."
+        sleep 60
       }
     }
 
