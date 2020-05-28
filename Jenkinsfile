@@ -13,9 +13,17 @@ def tfeCredentials = 'tfc-token'                         //Credential ID in Jenk
       
     stage('1. checkout') {
         steps {
-           cleanWs()
-          checkout scm
-        }
+          #cleanWs()
+          #checkout scm
+          checkout([
+                 $class: 'GitSCM',
+                 branches: [[name: 'master']],
+                 userRemoteConfigs: [[
+                    url: 'git@github.com:wshihadeh/rabbitmq_client.git',
+                    credentialsId: '',
+                 ]]
+                ])
+           }
     }  
 
    
