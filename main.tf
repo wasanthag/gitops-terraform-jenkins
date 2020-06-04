@@ -1,7 +1,7 @@
 # Terraform state will be stored in TFE
 terraform {
   backend "remote" {
-    hostname = "https://terraform.wwtatc.com"
+    hostname = "https://terraform.wwtatc.com:443"
     organization    = "FE-DEMO-ORG"
     workspaces {
       name  = "jenkins-dev"
