@@ -2,9 +2,9 @@
 terraform {
   backend "remote" {
     hostname = "app.terraform.io"
-    organization    = "wwtmulticloud"
+    organization    = var.org
     workspaces {
-      name  = "jenkins-dev"
+      name  = var.workspace
       }
   }
 }
