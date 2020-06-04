@@ -18,3 +18,13 @@ variable "ami" {
   # Bitnami NGINX AMI
   default = "ami-021acbdb89706aa89"
 }
+
+variable "org" {
+  description = "TFE org name"
+  default = TFE-DEMO-ORG"
+  }
+
+variable "workspace" {
+  description = "workspace name where TF is run"
+  default = "jenkins-dev"
+  }
