@@ -1,10 +1,10 @@
-# Terraform state will be stored in S3
+# Terraform state will be stored in TFE
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
-    organization    = var.org
+    hostname = "https://terraform.wwtatc.com"
+    organization    = "FE-DEMO-ORG"
     workspaces {
-      name  = var.workspace
+      name  = "jenkins-dev"
       }
   }
 }
