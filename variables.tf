@@ -21,7 +21,7 @@ variable "ami" {
 
 variable "org" {
   description = "TFE org name"
-  default = TFE-DEMO-ORG"
+  default = "TFE-DEMO-ORG"
   }
 
 variable "workspace" {
